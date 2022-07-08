@@ -65,6 +65,9 @@ git push origin master
 ```
 git checkout -b <Branch_Name>
 ```
+```
+git push --set-upstream origin <Branch_Name>
+```
 
 
 ## Application setup
