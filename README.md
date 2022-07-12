@@ -37,10 +37,10 @@ mkdir Rails-Project
 cd Rails-Project/
 ```
 ```
-rails _6.1.4_ new hello_app
+rails _6.1.4_ new sample_app
 ```
 ```
-cd hello_app
+cd sample_app
 ```
 ```
 bundle install
@@ -51,7 +51,7 @@ git init
 ```
 
 ```
-git remote add origin https://github.com/<UserName>/Rails-Hello-App.git
+git remote add origin https://github.com/<UserName>/Rails-sample-App.git
 ```
 ```
 git add -A
@@ -102,6 +102,52 @@ bundle install --without production
 ```
 rails s
 ```
+#### to generate controller
+```ruby
+-> rails generate controller StaticPages home help contact about
+-> rails generate controller Users new 
+```
+#### to destroy controller 
+```ruby
+rails destroy controller StaticPages home help contact about
+```
+#### to generate model 
+```ruby
+rails generate model User name:string email:string
+```
+#### to destroy model 
+```ruby
+rails destroy model User
+```
+#### to generate migrations
+```ruby
+rails generate migration <migration_name> password:string
+```
+#### to reset database migration
+```
+rails db:migrate:reset
+```
+#### to generate integration tests
+```
+rails generate integration_test <test_name>
+```
+##### run test by 
+```ruby
+rails test
+rails test:integration
+rails test:model
+```
+
+## Usefull gems
+```ruby
+gem 'bootstrap-sass','3.4.1'
+gem 'rubocop'
+```
+
+
+
+
+
 ## Deployment
 #### Check heroku version 
 ```
